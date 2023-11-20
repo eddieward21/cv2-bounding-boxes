@@ -22,3 +22,13 @@ subprocess.run(['ffmpeg',
                 '-loglevel',
                 'quiet']
               )
+
+ipd.Video('026c7465-309f6d33.mp4', width=700)
+
+cap = cv2.VideoCapture('026c7465-309f6d33.mp4')
+
+cap.get(cv2.cv2.CAP_PROP_FRAME_COUNT)
+# Video height and width
+height = cap.get(cv2.cv2.CAP_PROP_FRAME_HEIGHT)
+width = cap.get(cv2.cv2.CAP_PROP_FRAME_WIDTH)
+print(f'Height {height}, Width {width}')
